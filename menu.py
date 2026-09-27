@@ -1,3 +1,6 @@
+from calculadora import calc
+from historico import hist
+
 def menu_inicial():
 
     while True:
