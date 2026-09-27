@@ -1,10 +1,9 @@
 from calculadora import calc
 from historico import hist
 
+
 def menu_inicial():
-
     while True:
-
         print('''
             MENU INICIAL 
         ESCOLHA UMA OPÇÃO PARA CONTINUAR
@@ -18,6 +17,7 @@ def menu_inicial():
             escolha = int(input('Escolha uma opção: '))
         except ValueError:
             print('Escolha um valor válido!')
+            continue
 
         if escolha == 1:
             calc()
@@ -33,5 +33,6 @@ def menu_inicial():
             print('Escolha uma opção valida!')
             continue
 
-        
-        
+
+if __name__ == "__main__":
+    menu_inicial()
