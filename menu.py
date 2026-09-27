@@ -1,22 +1,36 @@
+
 from calculadora import calc
 from historico import hist
 
 
 def menu_inicial():
     while True:
-        print('''
-            MENU INICIAL 
-        ESCOLHA UMA OPÇÃO PARA CONTINUAR
-        
-        1 - CALCULADORA
-        2 - HISTORICO DE CONTAS
-        3 - FECHAR PROGRAMA
-        ''')
+        print("""
+╔════════════════════════════════════════════╗
+║                                            ║
+║             C A L C F O R G E              ║
+║                  v1.0                      ║
+║                                            ║
+╠════════════════════════════════════════════╣
+║               MENU PRINCIPAL               ║
+╠════════════════════════════════════════════╣
+║                                            ║
+║    [1]  CALCULADORA                        ║
+║    [2]  HISTÓRICO DE CONTAS                ║
+║    [3]  FECHAR PROGRAMA                    ║
+║                                            ║
+╚════════════════════════════════════════════╝
+        """)
 
         try:
-            escolha = int(input('Escolha uma opção: '))
+            escolha = int(input("  ➜ Selecione uma opção: "))
+
         except ValueError:
-            print('Escolha um valor válido!')
+            print("""
+  ┌────────────────────────────────────────┐
+  │ ERRO: Digite uma opção numérica válida.│
+  └────────────────────────────────────────┘
+            """)
             continue
 
         if escolha == 1:
@@ -26,12 +40,23 @@ def menu_inicial():
             hist()
 
         elif escolha == 3:
-            print('Fechando programa..')
+            print("""
+╔════════════════════════════════════════════╗
+║                                            ║
+║       ENCERRANDO O CALCFORGE...            ║
+║                                            ║
+║       Obrigado por utilizar!               ║
+║                                            ║
+╚════════════════════════════════════════════╝
+            """)
             break
 
         else:
-            print('Escolha uma opção valida!')
-            continue
+            print("""
+  ┌────────────────────────────────────────┐
+  │ ERRO: Selecione uma opção de 1 a 3.    │
+  └────────────────────────────────────────┘
+            """)
 
 
 if __name__ == "__main__":
